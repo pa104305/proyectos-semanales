@@ -1,0 +1,105 @@
+numero primo: numero que solo se puede dividir entre 1 y entre si mismo
+
+si se divide entre 2, 3, 5, 7 no es 
+
+1-. consultar varible con numero
+2-. comprobar si es multiplo de 2, 3, 5 o 7 si es asi se olvida
+
+p y t
+p y c
+p y s 
+t y c
+t y s
+c y s 
+-- Primera prueba --
+
+    while count <= 100:
+        if count == t and count == c:
+            print("divisible")
+            t += 3
+            c += 5
+        elif count == t and count == s:
+            print("divisible")
+            t += 3
+            s += 7
+        elif count == t and count == p:
+            print("divisible")
+            t += 3
+            p += 2
+        elif count == p and count == c:
+            print("divisible")
+            p += 2
+            c += 5
+        elif count == p and count == s:
+            print("divisible")
+            p += 2
+            s += 7
+        elif count == c and count == s:
+            print("divisible")
+            c += 5
+            s += 7
+        elif count == p:
+            print("par")
+            p += 2
+        elif count == t:
+            print("tercia")
+            t += 3
+        elif count == c:
+            print("quinta")
+            c += 5
+        elif count == s:
+            print("septima")
+            s += 7
+        else:
+            print(count)
+            primos.append(count)
+        count += 1
+    
+    print(primos)
+
+
+-- Segundo prueba --
+    p = []
+    t = []
+    c = []
+    s = []
+    def multiplos():
+        cicle = 1
+        while cicle > 15:
+            count = 7 * cicle
+            cicle += 1
+            s.append(count)
+        cicle = 1
+        while cicle > 21:
+            count = 5 * cicle
+            cicle += 1
+            c.append(count)
+        cicle = 1
+        while cicle > 34:
+            count = 3 * cicle
+            cicle += 1
+            t.append(count)
+        cicle += 1
+        while cicle > 51:
+            count = 2 * cicle
+            cicle += 1
+            p.append(count)
+    def comp():
+        for number_p in p:
+            for number_t in t:
+                for number_c in c:
+                    for number_s in s:
+                        cicle = 1
+                        while cicle > 101:
+                            if cicle == number_p and cicle == number_t:
+                                print("divisible")
+                            elif cicle == number_p and cicle == number_c:
+                                print("divisible")
+                            elif cicle == number_p and cicle == number_s:
+                                print("divisible")
+                            else:
+                                primos.append(cicle)
+                            cicle += 1
+                        
+    multiplos()
+    comp()
